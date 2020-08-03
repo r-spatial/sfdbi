@@ -6,6 +6,7 @@ if (FALSE) {
     usethis::create_package("../sfdbi", open = FALSE)
     usethis::use_readme_rmd()
     usethis::use_news_md()
+    usethis::use_logo("logo.svg")
     usethis::use_testthat()
     usethis::use_roxygen_md()
     usethis::use_mit_license()
