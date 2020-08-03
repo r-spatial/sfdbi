@@ -1,0 +1,24 @@
+Package: sfdbi
+Title: Database interface for spatial data
+Version: 0.0.0.9000
+Authors@R: 
+    c(person(given = "Etienne",
+           family = "Racine",
+           role = c("aut", "cre"),
+           email = "etiennebr@gmail.com",
+           comment = c(ORCID = "0000-0003-1109-894X")),
+      person(given = "Edzer",
+             family = "Pebesma",
+             role = c("aut"),
+             email = "edzer.pebesma@uni-muenster.de",
+             comment = c(ORCID = "0000-0001-8049-7069")))
+Description: An `sf` back end for databases that allows you to
+    work with database tables as if they are in-memory spatial data frames.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0
+Suggests: 
+    testthat,
+    covr
