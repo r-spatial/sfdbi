@@ -150,7 +150,7 @@ setMethod("dbSendQuery", "SFSQLConnection",
             if (inherits(layer_data, "try-error")) {
               message("executing SQL failed:")
               writeLines(statement)
-              if (length(gregexpr("SELECT", statement)[[1]]) > 1) {
+              if (length(gregexpr("SELECT", statement, ignore.case = TRUE)[[1]]) > 1) {
                 stop("perhaps driver in use does not support sub-queries?")
               } else {
                 stop("")
