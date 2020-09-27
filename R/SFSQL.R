@@ -53,7 +53,12 @@ setClass("SFSQLConnection",
 setMethod("show", "SFSQLConnection", function(object) {
   cat("<SFSQLConnection>\n")
   tables <- DBI::dbListTables(object)
-  cat("   DSN: ", object@DSN, "\n", sep = "")
+  dsn <- object@DSN
+  if (grepl("pass", dsn, ignore.case = TRUE) || grepl("user", dsn, ignore.case = TRUE)) {
+
+    dsn <- paste0(strsplit(dsn, "\\s")[[1L]][1L], "...")
+  }
+  cat("   DSN: ", dsn, "\n", sep = "")
   cat("tables: ", paste(tables, collapse = ", "), "\n", sep = "")
 })
 #' dbConnect
