@@ -20,14 +20,24 @@ SFSQL_PG()
 \arguments{
 \item{drv}{SFSQL_PGDriver created by \code{SFSQL_PG()}}
 
-\item{readonly}{open in readonly mode?}
+\item{host}{database server}
 
-\item{DSN}{data source name, may be a file, or folder path, database connection string, or URL}
+\item{dbname}{database name}
+
+\item{user}{user name if needed}
+
+\item{password}{password if needed}
+
+\item{readonly}{open in readonly mode?}
 }
 \description{
-SFSQL_PG driver
+SFSQL_PG driver, a wrapper for SFSQL to construct the full connection string required by
+GDAL from host,dbname,user,password
 
-dbConnect
+dbConnect for PostgreSQL via GDAL
+}
+\details{
+https://gdal.org/drivers/vector/pg.html
 }
 \examples{
 \dontrun{

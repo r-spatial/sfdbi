@@ -139,8 +139,6 @@ setClass("SFSQLResult",
 #' @param statement OGR SQL, see http://www.gdal.org/ogr_sql.html
 #' @param ... for compatibility with generic
 #' @export
-#' @importFrom vapour vapour_read_attributes vapour_read_geometry_text
-#' @importFrom wk new_wk_wkb
 #' @examples
 #' afile <- system.file("gpkg/nc.gpkg", package = "sf", mustWork = TRUE)
 #' db <- dbConnect(SFSQL(), afile)
@@ -202,7 +200,6 @@ setMethod("dbReadTable", c(conn = "SFSQLConnection", name = "character"),
           })
 
 
-#' @importFrom vapour vapour_layer_names
 #' @export
 setMethod("dbListTables", c(conn = "SFSQLConnection"),
           function(conn, ...){

@@ -18,8 +18,12 @@ SFSQL()
 }
 \description{
 SFSQL driver
+https://gdal.org/user/ogr_sql_dialect.html
 
 dbConnect
+}
+\details{
+https://gdal.org/user/ogr_sql_dialect.html
 }
 \examples{
 \dontrun{
