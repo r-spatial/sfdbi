@@ -15,7 +15,7 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 
 sfdbi helps you manipulate spatial data stored in a database as if it
 was in-memory with standard sf and [dplyr](https://dplyr.tidyverse.org/)
-functions. With sfdbi, you can reads and write sf objects to databases
+functions. With sfdbi, you can read and write sf objects to databases
 and translate sf operations to `SQL`. We support
 [`postgis`](https://postgis.net/), but feel free to open an issue for
 other backends and show you interest.
